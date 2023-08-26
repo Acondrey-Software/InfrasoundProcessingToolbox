@@ -427,8 +427,6 @@ stimuli present.
 
 # Sensor Analysis
 
----
-
 Sensitivity and Spectral Estimation Scripts
 
 ## analyzeTone.sh
