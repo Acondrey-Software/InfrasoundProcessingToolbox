@@ -414,7 +414,7 @@ Note genSnd.sh is a very low level script. It assumes that the cd11 files in the
 Full directory have been converted to “snd” files. Use this command to make the
 conversion:
 
-(cd Full; cd11tosnd *.cd11)
+`cd Full; cd11tosnd *.cd11`
 
 Standard forms for the genSnd.sh:
 
