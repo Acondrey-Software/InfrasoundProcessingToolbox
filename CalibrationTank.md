@@ -4,16 +4,12 @@
 
 # Contents
 
----
-
 [Overview](#overview)
 
 [Signal Generation Scripts](#signal-generation-scripts)
 
 
 # Overview
-
----
 
 All of the scripts described below support the command-line parsing. The
 `-usage` flag will always give the most recently supported flags and variables.
@@ -63,7 +59,6 @@ tones, and “0.015 units ~ 4 Pa rms for noise.
 
 # Signal Generation Scripts
 
----
 
 The following sections describe the various signal generation scripts. These
 scripts are divided into three categories: 1) high-level screening scripts, 2)
@@ -274,8 +269,6 @@ number of sweeps in the presentation.
 
 # Lower level signal generation scripts
 
----
-
 The lower level signals are intended as a simplified interface to the binary
 executables.  
 
@@ -374,8 +367,6 @@ Usage: `runNoiseMIII.sh options amp1 amp2 …`
 
 # Geotech Scripts
 
----
-
 These scripts are provided as informational only. With the proper tweaking,
 these scripts should function on any UNIX/LINUX/DARWIN/CYGWIN system, it is
 not expected that these will work without some modification on different
@@ -435,8 +426,6 @@ train to position the start of the snd extraction inside of the interval with
 stimuli present.
 
 # Sensor Analysis
-
----
 
 Sensitivity and Spectral Estimation Scripts
 
@@ -580,8 +569,6 @@ Usage: `genAdaptN.sh [options] [file list]`
 
 # Sensitivity and Spectral Estimation Binaries
 
----
-
 ## dfft
 
 DFFT (which stands for double-precision fast-Fourier transform) is a
@@ -626,8 +613,6 @@ document:
 5. `sndpeaks`
 
 # Transfer Function and Self-Noise Estimation Scripts
-
----
 
 ## genwdir.cal.sh
 This tool is used to generate “wdir” (windowed FFT) directories for all “.snd”
