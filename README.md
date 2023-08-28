@@ -29,9 +29,9 @@ functionality.
 
 ## Other Documentation
 
-| Document                          | Description                                                        |
-|-----------------------------------|--------------------------------------------------------------------|
-| (Calibration)[CalibrationTank.md] | Describes the set of scripts used to calibrate infrasound sensors. |
+| Document                                 | Description                                                        |
+|------------------------------------------|--------------------------------------------------------------------|
+| [CalibrationTank.md](CalibrationTank.md) | Describes the set of scripts used to calibrate infrasound sensors. |
 
 ## Installation
 
