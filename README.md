@@ -32,7 +32,3 @@ functionality.
 | Document                                 | Description                                                        |
 |------------------------------------------|--------------------------------------------------------------------|
 | [CalibrationTank.md](CalibrationTank.md) | Describes the set of scripts used to calibrate infrasound sensors. |
-
-## Installation
-
-## Dependencies
