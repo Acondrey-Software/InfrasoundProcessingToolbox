@@ -1,6 +1,6 @@
 # Calibration Tank:  Main Commands
 
-Original Author: Carrick L. Talmadge, Ph.D.
+**Original Author:** Carrick L. Talmadge, Ph.D.
 
 # Contents
 
