@@ -42,5 +42,5 @@ $$
 (2)
 
 $$
-    E(a, a^{*}) = \sum_{n=0}^{N-1} W_n(ae^{-2πift_n} + a^{*}e^{2πift_n}-x_n)^2
+    E(a, a^\ast) = \sum_{n=0}^{N-1} W_n \left(ae^{-2πift_n} + a^\ast e^{2πift_n}-x_n \right)^2
 $$
