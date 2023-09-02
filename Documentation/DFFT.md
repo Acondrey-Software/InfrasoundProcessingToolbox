@@ -36,7 +36,7 @@ Fourier amplitude, which is computed for a frequency $f$ from the time series $x
 (1)
 
 $$
-y(t_n) = a e^{-2πift_n} + a^* e^{2}πiftn, n=0,1,…N-1,
+y(t_n) = a e^{-2πift_n} + a^* e^{2}πiftn, n=0,1,…N-1
 $$
 
 (2)
