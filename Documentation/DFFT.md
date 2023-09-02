@@ -1,9 +1,6 @@
 # DFFT Manual
 
 **Original Author:** Carrick L. Talmadge, Ph.D.
-## About
-
-This document was originally written by Carrick Talmadge, Ph.D. and is a part of the Infrasound Processing Toolbox.
 
 ## Overview
 
@@ -28,7 +25,7 @@ imperfect or doesn't go on indefinitely.
 
 ## Theory
 
-### Discrete Fourier Transform
+### A. Discrete Fourier Transform
 
 We note that the FFT refers a class of algorithms for efficiently ( $O(n \log(n))$ )
 computing the discrete Fourier transform (DFT). The DFT converts an
@@ -48,7 +45,8 @@ $$
 E(a, a^\ast) = \sum_{n=0}^{N-1} W_n \left(ae^{-2πift_n} + a^\ast e^{2πift_n}-x_n \right)^2,
 $$
 
-where $E(a, a^\ast)$ is the optimization function for weighted least-squares fit. We note that $y(t_n)$ is a real-valued function.
+where $E(a, a^\ast)$ is the optimization function for weighted least-squares fit. We note that $y(t_n)$ is a real-valued
+function.
 Here $W_n$ is referred to as a “window function”, but we see also has an interpretation as the weighting function for
 $E(a, a^\ast)$. Minimizing $E(a, a^\ast)$ gives:
 
@@ -67,5 +65,61 @@ $$
 (5)
 
 $$
-S_w = \sum_{n=0}^{N-1} W_n
+S_w = \sum_{n=0}^{N-1} W_n.
 $$
+
+We recover the DFT by writing $t_n=nΔt$, $T=N Δt$, $Δf=\frac{1}{T}$, $f_m=mΔf$, so
+
+(6)
+
+$$
+2πif_m t_n = 2πi \left(\frac{m}{NΔt} \right) \left(nΔt \right) = 2πimn/N,
+$$
+
+and
+
+(7)
+
+$$
+X_m = \frac{1}{S_w} \sum_{n=0}^{N-1} W_n e^{2πimn/N} x_n.
+$$
+
+We note that the coefficients $X_m$ are periodic with period $N$. Only the frequencies in the range $-\frac{f_s}{2}\leq
+f \leq \frac{f_2}{2}$ can be represented without aliasing.
+Without loss of generality, we can identify:
+
+(8)
+
+$$
+\\{f_m\\} = \\{0, Δf, 2Δf, …, \left(\frac{N}{2} -1 \right)Δf, \frac{NΔf}{2}, \left(-\frac{N}{2} -1 \right)Δf, …, -2Δf,
+-Δf \\}.
+$$
+
+Note there are exactly $N$ values of $X_m$ and $F_m$. Also, it can be shown that
+
+(9)
+
+$$
+\hat{X}^\ast \left(-f_m \right) = \hat{X} \left(f_m \right),
+$$
+
+(10)
+
+$$
+\hat{X} \left(-f_m \right) = \hat{X}_{N-m}.
+$$
+
+## B. Welch Periodogram
+
+The Welch periodogram (Welch, 1967) divides a data record in to equal length segments, which have a tapered window
+applied to them (Figure 1). Typically each window is half-overlapping (this preserves the original statistical power of
+the data series, as will be discussed below). The DFTs for each of these windows are computed, with the periodogram
+being given by the mean-square value of the individual DFTs. This process reduces the noise associated with an
+individual DFT, at the price of a reduction in frequency resolution.
+
+It can be advantageous to use a higher overlap factor, such as when a noisy data rejection criterion is being used (
+Talmadge, 1993).
+
+The overlap factor is set using the nOverlap variable in DFFT. Note that this factor refers to the fraction of a window
+to step between consecutive windows. The variable “nover” can be used for a more fine-grained control of the amount of
+overlap.
