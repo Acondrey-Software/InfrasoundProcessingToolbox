@@ -36,11 +36,33 @@ Fourier amplitude, which is computed for a frequency $f$ from the time series $x
 (1)
 
 $$
-y(t_n) = a e^{-2πift_n} + a^* e^{2}πiftn, n=0,1,…N-1
+y(t_n) = a e^{-2πift_n} + a^* e^{2}πiftn, n=0,1,…N-1,
 $$
 
 (2)
 
 $$
-    E(a, a^{*}) = \sum_{n=0}^{N-1} W_n(ae^{-2πift_n} + a^{*}e^{2πift_n}-x_n)^2
+E(a, a^\ast) = \sum_{n=0}^{N-1} W_n \left(ae^{-2πift_n} + a^\ast e^{2πift_n}-x_n \right)^2,
+$$
+
+where $E(a, a^\ast)$ is the optimization function for weighted least-squares fit. We note that $y(t_n)$ is a real-valued function.
+Here $W_n$ is referred to as a “window function”, but we see also has an interpretation as the weighting function for
+$E(a, a^\ast)$. Minimizing $E(a, a^\ast)$ gives:
+
+(3)
+
+$$
+\frac{∂E}{∂a^\ast} = 2 \sum_{n=0}^{N-1} W_n e^{-2ift_n} \left(ae^{-2ift_n} + a^\ast e^{2ift_n} - x_n \right) = 0,
+$$
+
+(4)
+
+$$
+
+$$
+
+(5)
+
+$$
+
 $$

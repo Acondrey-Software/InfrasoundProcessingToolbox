@@ -29,6 +29,7 @@ functionality.
 
 ## Other Documentation
 
-| Document                                 | Description                                                        |
-|------------------------------------------|--------------------------------------------------------------------|
-| [CalibrationTank.md](CalibrationTank.md) | Describes the set of scripts used to calibrate infrasound sensors. |
+| Document                                               | Description                                          |
+|--------------------------------------------------------|------------------------------------------------------|
+| [CalibrationTank.md](Documentation/CalibrationTank.md) | Describes the calibration tank and its use.          |
+| [DFFT](Documentation/DFFT.md)                          | Describes the DFFT algorithm and its implementation. |
