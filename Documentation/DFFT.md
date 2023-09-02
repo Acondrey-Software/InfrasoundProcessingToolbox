@@ -1,6 +1,9 @@
 # DFFT Manual
 
 **Original Author:** Carrick L. Talmadge, Ph.D.
+## About
+
+This document was originally written by Carrick Talmadge, Ph.D. and is a part of the Infrasound Processing Toolbox.
 
 ## Overview
 
@@ -58,11 +61,11 @@ $$
 (4)
 
 $$
-
+a = \frac{1}{S_w} \sum_{n=0}^{N-1} W_n e^{-2πift_n}x_n,
 $$
 
 (5)
 
 $$
-
+S_w = \sum_{n=0}^{N-1} W_n
 $$
