@@ -27,8 +27,20 @@ imperfect or doesn't go on indefinitely.
 
 ### Discrete Fourier Transform
 
-We note that the FFT refers a class of algorithms for efficiently (O(N log(N))
+We note that the FFT refers a class of algorithms for efficiently ( $O(n \log(n))$ )
 computing the discrete Fourier transform (DFT). The DFT converts an
 equally-spaced real-valued time series $x_n$ of points into an equivalent
-equally-spaced frequency–domain series of points Xm. The underlying tool is the
-Fourier amplitude, which is computed for a frequency f from the time series xn:
+equally-spaced frequency–domain series of points $X_m$. The underlying tool is the
+Fourier amplitude, which is computed for a frequency $f$ from the time series $x_n$:
+
+(1)
+
+$$
+y(t_n) = a e^{-2πift_n} + a^* e^{2}πiftn, n=0,1,…N-1
+$$
+
+(2)
+
+$$
+    E(a, a^{*}) = \sum_{n=0}^{N-1} W_n(ae^{-2πift_n} + a^{*}e^{2πift_n}-x_n)^2
+$$
