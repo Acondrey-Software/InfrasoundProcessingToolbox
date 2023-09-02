@@ -124,7 +124,7 @@ The overlap factor is set using the nOverlap variable in DFFT. Note that this fa
 to step between consecutive windows. The variable “nover” can be used for a more fine-grained control of the amount of
 overlap.
 
-![Figure 1](Documentation/Images/hanntapered_window.png)
+![Figure 1](Images/hanntapered_window.png)
 *Figure 1: The top panel is the original data set; the bottom four panels show four consecutive half-overlapping
 Hann-tapered windows.*
 
